@@ -9,23 +9,15 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap');
 
-    /* ✅ [แก้ไข] เพิ่ม Universal selector และ Box Sizing */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Noto Sans Thai", sans-serif;
-    }
-
     body {
-      /* font-family: "Noto Sans Thai", sans-serif; <-- ย้ายไปที่ * */
+      font-family: "Noto Sans Thai", sans-serif;
       background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      /* margin: 0; <-- ถูกตั้งใน * แล้ว */
-      padding: 20px; /* ✅ [แก้ไข] ต้องใส่ padding กลับมาที่ body */
+      margin: 0;
+      padding: 20px;
     }
 
     /* กล่องหลักตรงกลาง */
@@ -41,7 +33,7 @@
 
     /* Div สำหรับจัดกลุ่มโลโก้ 4 ตัวบน */
     .logo-row {
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -60,24 +52,15 @@
       width: 90%;
       max-width: 400px;
       height: auto;
-      margin-bottom: 0;
     }
 
-    /* 2. ชื่อโครงการ */
+    /* 2. ชื่อโครงการ (เหมือนเดิม) */
     .title {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 15px;
-      color: #333;
-    }
-
-    /* สไตล์สำหรับ H2 (ชื่อโครงการภาษาไทย) */
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      margin-top: 0;
+      margin-top: 0; /* ✅ [แก้ไข] ลบระยะห่างด้านบนของ H1 */
       margin-bottom: 30px;
-      color: #555;
+      color: #333;
     }
 
     /* 3. ปุ่มกด (เหมือนเดิม) */
@@ -103,7 +86,6 @@
     @media (max-width: 768px) {
       .title {
         font-size: 1.2rem;
-        margin-bottom: 10px;
       }
       .main-container {
         padding: 20px;
@@ -116,10 +98,6 @@
       
       .logo-ad {
          width: 100%;
-      }
-       
-      h2 {
-        font-size: 1rem;
       }
     }
   </style>
@@ -139,12 +117,10 @@
     
     <h1 class="title">
       Welcome to E-Learning<br>
-      Audio Description
-    </h1>
-    <h2>
+      Audio Description<br>
       ระบบ E-learning หลักสูตรอบรมพัฒนาทักษะการผลิตเสียงบรรยายภาพสำหรับบุคคลทั่วไป โดยแกนนำผู้ผลิต (ออนไลน์)
-    </h2>
-   
+    </h1>
+    
     <button class="btn-custom" onclick="redirectToApp()">
       เข้าสู่ระบบ / ลงทะเบียน
     </button>
