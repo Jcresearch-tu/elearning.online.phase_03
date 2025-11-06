@@ -9,17 +9,24 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap');
 
+    /* ✅ [เพิ่ม] ตัวรีเซ็ต CSS และแก้ไขปัญหา "ปลิ้นขอบ" */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* สำคัญมาก: ตัวแก้ปัญหาปลิ้นขอบ */
+      font-family: "Noto Sans Thai", sans-serif;
+    }
+
     body {
-      font-family: "Noto Sans Thai", sans-serif;
       background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      margin: 0;
-      padding: 20px;
+      padding: 20px; /* เว้นขอบให้ body */
     }
 
+    /* กล่องหลักตรงกลาง */
     .main-container {
       background-color: #ffffff;
       border-radius: 10px;
@@ -30,6 +37,7 @@
       width: 100%;
     }
 
+    /* Div สำหรับจัดกลุ่มโลโก้ 4 ตัวบน */
     .logo-row {
       margin-bottom: 20px;
       display: flex;
@@ -38,18 +46,22 @@
       align-items: center;
     }
 
+    /* 1. โลโก้ 4 ตัวบน (ขนาดเท่ากัน) */
     .logo-partner {
       width: 100px;
       margin: 5px 10px;
       vertical-align: middle;
     }
 
+    /* 2. โลโก้ AD (ตัวใหญ่) */
     .logo-ad {
       width: 90%;
       max-width: 400px;
       height: auto;
+      margin-bottom: 0; /* ลดระยะห่าง */
     }
 
+    /* 2. ชื่อโครงการ */
     .title {
       font-size: 1.5rem;
       font-weight: 600;
@@ -58,7 +70,9 @@
       color: #333;
     }
 
+    /* 3. ปุ่มกด */
     .btn-custom {
+      font-family: "Noto Sans Thai", sans-serif;
       background-color: #743d88;
       color: white;
       border: none;
@@ -75,6 +89,7 @@
       background-color: #5e0f83;
     }
 
+    /* ปรับ CSS สำหรับมือถือ */
     @media (max-width: 768px) {
       .title {
         font-size: 1.2rem;
@@ -99,13 +114,13 @@
   <div class="main-container">
     
     <div class="logo-row">
-      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase_03/main/National_Broadcasting_and_Telecommunications_Commission_(Thailand)_Seal.png" alt="Logo กสทช." class="logo-partner">
-      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase_03/main/logo กทปส.png" alt="Logo กทปส." class="logo-partner">
-      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase_03/main/Thammasat_main_logo.png" alt="Logo มธ." class="logo-partner">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/National_Broadcasting_and_Telecommunications_Commission_(Thailand)_Seal.png" alt="Logo กสทช." class="logo-partner">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/logo กทปส.png" alt="Logo กทปส." class="logo-partner">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/Thammasat_main_logo.png" alt="Logo มธ." class="logo-partner">
       <img src="https://quota.jc.tu.ac.th/images/jc_logo.png" alt="Logo JC" class="logo-partner">
     </div>
 
-    <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase_03/main/AD Logo.png" alt="Logo AD" class="logo-ad">
+    <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/AD Logo.png" alt="Logo AD" class="logo-ad">
     
     <h1 class="title">
       Welcome to E-Learning<br>
@@ -119,6 +134,7 @@
   </div>
   
   <script>
+    // --- (JavaScript ทั้งหมดเหมือนเดิม ไม่ต้องแก้ไข) ---
     function isIOS() {
       return /iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
