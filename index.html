@@ -20,7 +20,6 @@
       padding: 20px;
     }
 
-    /* กล่องหลักตรงกลาง */
     .main-container {
       background-color: #ffffff;
       border-radius: 10px;
@@ -31,7 +30,6 @@
       width: 100%;
     }
 
-    /* Div สำหรับจัดกลุ่มโลโก้ 4 ตัวบน */
     .logo-row {
       margin-bottom: 20px;
       display: flex;
@@ -40,32 +38,27 @@
       align-items: center;
     }
 
-    /* 1. โลโก้ 4 ตัวบน (ขนาดเท่ากัน) */
     .logo-partner {
       width: 100px;
       margin: 5px 10px;
       vertical-align: middle;
     }
 
-    /* 2. โลโก้ AD (ตัวใหญ่) */
     .logo-ad {
       width: 90%;
       max-width: 400px;
       height: auto;
     }
 
-    /* 2. ชื่อโครงการ (เหมือนเดิม) */
     .title {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-top: 0; /* ✅ [แก้ไข] ลบระยะห่างด้านบนของ H1 */
+      margin-top: 0;
       margin-bottom: 30px;
       color: #333;
     }
 
-    /* 3. ปุ่มกด (เหมือนเดิม) */
     .btn-custom {
-      font-family: "Noto Sans Thai", sans-serif;
       background-color: #743d88;
       color: white;
       border: none;
@@ -82,7 +75,6 @@
       background-color: #5e0f83;
     }
 
-    /* ปรับ CSS สำหรับมือถือให้สะอาดขึ้น */
     @media (max-width: 768px) {
       .title {
         font-size: 1.2rem;
@@ -127,7 +119,6 @@
   </div>
   
   <script>
-    // --- (JavaScript ทั้งหมดเหมือนเดิม ไม่ต้องแก้ไข) ---
     function isIOS() {
       return /iPhone|iPad|iPod/i.test(navigator.userAgent);
     }
