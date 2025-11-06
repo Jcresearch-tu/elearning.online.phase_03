@@ -3,14 +3,10 @@
 <head>
   <title>ระบบ E-learning หลักสูตรอบรมพัฒนาทักษะการผลิตเสียงบรรยายภาพสำหรับบุคคลทั่วไป โดยแกนนำผู้ผลิต (ออนไลน์)</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
+  <link rel="icon" href="https://quota.jc.tu.ac.th/images/jc_logo.png" type="image/png">  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap');
-
-    /* ✅ [เพิ่ม] ตัวรีเซ็ต CSS และแก้ไขปัญหา "ปลิ้นขอบ" */
-    * {
+    html {
       margin: 0;
       padding: 0;
       box-sizing: border-box; /* สำคัญมาก: ตัวแก้ปัญหาปลิ้นขอบ */
@@ -132,7 +128,6 @@
       เข้าสู่ระบบ / ลงทะเบียน
     </button>
   </div>
-  
   <script>
     // --- (JavaScript ทั้งหมดเหมือนเดิม ไม่ต้องแก้ไข) ---
     function isIOS() {
@@ -146,7 +141,6 @@
     }
     
     function redirectToApp() {
-      
       const scriptUrls = [
         'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbz_r59WKzetIdaGZncuyYS-ARuC4fR1rZxU3UvyoJPfcJKpsBNxXlUlIHFwlLl7AR2wHw/exec', // URL จากบัญชีที่ 1
         'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbwVIn3x9Jm0-RZM6daJ6lBPrpgeHW177HUnrKtaAd7DAd16aSw5ir_xpt8_MwnZWdJM/exec', // URL จากบัญชีที่ 2
@@ -168,9 +162,9 @@
 
       window.open(finalUrl, '_blank');
     }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
+
 
 
