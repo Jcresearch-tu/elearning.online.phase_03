@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ระบบ E-learning หลักสูตรอบรมพัฒนาทักษะการผลิตเสียงบรรยายภาพสำหรับบุคคลทั่วไป โดยแกนนำผู้ผลิต (ออนไลน์)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://quota.jc.tu.ac.th/images/jc_logo.png" type="image/png">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap');
+
+    /* ✅ [แก้ไข] เพิ่ม Universal selector และ Box Sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Noto Sans Thai", sans-serif;
+    }
+
+    body {
+      /* font-family: "Noto Sans Thai", sans-serif; <-- ย้ายไปที่ * */
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* margin: 0; <-- ถูกตั้งใน * แล้ว */
+      padding: 20px; /* ✅ [แก้ไข] ต้องใส่ padding กลับมาที่ body */
+    }
+
+    /* กล่องหลักตรงกลาง */
+    .main-container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    /* Div สำหรับจัดกลุ่มโลโก้ 4 ตัวบน */
+    .logo-row {
+      margin-bottom: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 1. โลโก้ 4 ตัวบน (ขนาดเท่ากัน) */
+    .logo-partner {
+      width: 100px;
+      margin: 5px 10px;
+      vertical-align: middle;
+    }
+
+    /* 2. โลโก้ AD (ตัวใหญ่) */
+    .logo-ad {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    /* 2. ชื่อโครงการ */
+    .title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    /* สไตล์สำหรับ H2 (ชื่อโครงการภาษาไทย) */
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    /* 3. ปุ่มกด (เหมือนเดิม) */
+    .btn-custom {
+      font-family: "Noto Sans Thai", sans-serif;
+      background-color: #743d88;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #5e0f83;
+    }
+
+    /* ปรับ CSS สำหรับมือถือให้สะอาดขึ้น */
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .main-container {
+        padding: 20px;
+      }
+      
+      .logo-partner {
+        width: 80px;
+        margin: 5px;
+      }
+      
+      .logo-ad {
+         width: 100%;
+      }
+       
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    
+    <div class="logo-row">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/National_Broadcasting_and_Telecommunications_Commission_(Thailand)_Seal.png" alt="Logo กสทช." class="logo-partner">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/logo กทปส.png" alt="Logo กทปส." class="logo-partner">
+      <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/Thammasat_main_logo.png" alt="Logo มธ." class="logo-partner">
+      <img src="https://quota.jc.tu.ac.th/images/jc_logo.png" alt="Logo JC" class="logo-partner">
+    </div>
+
+    <img src="https://raw.githubusercontent.com/Jcresearch-tu/elearning.online.phase3/main/AD Logo.png" alt="Logo AD" class="logo-ad">
+    
+    <h1 class="title">
+      Welcome to E-Learning<br>
+      Audio Description
+    </h1>
+    <h2>
+      ระบบ E-learning หลักสูตรอบรมพัฒนาทักษะการผลิตเสียงบรรยายภาพสำหรับบุคคลทั่วไป โดยแกนนำผู้ผลิต (ออนไลน์)
+    </h2>
+   
+    <button class="btn-custom" onclick="redirectToApp()">
+      เข้าสู่ระบบ / ลงทะเบียน
+    </button>
+  </div>
+  
+  <script>
+    // --- (JavaScript ทั้งหมดเหมือนเดิม ไม่ต้องแก้ไข) ---
+    function isIOS() {
+      return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+    function isFacebookApp() {
+      return /FBAN|FBAV/i.test(navigator.userAgent);
+    }
+    function isLineApp() {
+      return /Line/i.test(navigator.userAgent);
+    }
+    
+    function redirectToApp() {
+      
+      const scriptUrls = [
+        'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbz_r59WKzetIdaGZncuyYS-ARuC4fR1rZxU3UvyoJPfcJKpsBNxXlUlIHFwlLl7AR2wHw/exec', // URL จากบัญชีที่ 1
+        'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbwVIn3x9Jm0-RZM6daJ6lBPrpgeHW177HUnrKtaAd7DAd16aSw5ir_xpt8_MwnZWdJM/exec', // URL จากบัญชีที่ 2
+        'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbyRRTqKdQSRu-Cu4zg3ikQFycthraz4usqWQ4gKWzzjuP357vpadbDf2aB5dPpK15tzrQ/exec',  // URL จากบัญทีที่ 3
+        'https://script.google.com/a/macros/jc.tu.ac.th/s/AKfycbwfdpTnrtuQIO_cLTrDEq_a6Yxjll_rTWDwoKiYC1Bjjr63Lbq-N_jiBYlKUfztuGyV/exec'
+      ];
+
+      const randomIndex = Math.floor(Math.random() * scriptUrls.length);
+      const selectedUrl = scriptUrls[randomIndex];
+      const safariUrl = 'x-safari-' + selectedUrl;
+
+      let finalUrl;
+
+      if (isIOS() && (isFacebookApp() || isLineApp())) {
+        finalUrl = safariUrl;
+      } else {
+        finalUrl = selectedUrl;
+      }
+
+      window.open(finalUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
